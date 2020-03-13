@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto By Valor Acima</title>
+</head>
+<body>
+    <h2>Produto by valor acima</h2>
+    <table>
+        <tr th:each="produto : ${produtos}">
+        <td th:text="${produto?.codigo}" />
+        <td th:text="${produto?.nome}" />
+        <td th:text="${produto?.valor}" />
+        <td th:text="${produto?.estoque}" />
+        <br>
+    </tr>
+    </table>
+     
+</body>
+</html>

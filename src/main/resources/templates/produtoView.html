@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto View</title>
+</head>
+<body>
+    <h1>Produto View</h1>
+    <!-- Se produto for válido -->
+    <div th:if="${produto}">
+        <p th:text="${produto?.codigo}"></p>
+        <p th:text="${produto?.nome}"></p>
+        <p th:text="${produto?.valor}"></p>
+        <p th:text="${produto?.estoque}"></p>
+    </div>
+   <!--Se nao for-->
+    <div th:unless="${produto}">
+        <div>Não existe nenhum produto com esse código!</div>
+    </div>
+</body>
+</html>
